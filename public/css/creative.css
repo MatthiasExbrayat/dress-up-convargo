@@ -11,7 +11,7 @@ body {
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #00ccff;
+  border-color: #000000;
 }
 
 hr.light {
@@ -19,7 +19,7 @@ hr.light {
 }
 
 a {
-  color: #00ccff;
+  color: #000000;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
@@ -126,7 +126,7 @@ img::-moz-selection {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: #000;
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #fff;
