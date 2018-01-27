@@ -16,9 +16,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/creative.css" rel="stylesheet">
 
@@ -30,9 +27,6 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger">Convargo</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
       </div>
     </nav>
 
@@ -40,7 +34,7 @@
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
+            <h1>
               <strong>Send your goods easily and quickly</strong>
             </h1>
             <hr>
@@ -58,6 +52,7 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">Compute invoice</h2>
             <hr class="my-4">
+            &nbsp;
             <div id="trucker">
               <div class="form-group row">
               <label class="col-3 col-form-label">Trucker name : </label>
@@ -66,13 +61,13 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-3 col-form-label">Price by km</label>
+              <label class="col-3 col-form-label">Price by km : </label>
               <div class="col-8">
                 <input class="price-by-km form-control" type="number" placeholder="Price by km">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-3 col-form-label">Price by m3</label>
+              <label class="col-3 col-form-label">Price by m3 : </label>
               <div class="col-8">
                 <input class="price-by-cubic form-control" type="number" placeholder="Price by m3">
               </div>
@@ -87,44 +82,63 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-3 col-form-label">Price by km</label>
+              <label class="col-3 col-form-label">Price by km : </label>
               <div class="col-8">
                 <input class="distance form-control" type="number" placeholder="Distance in km">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-3 col-form-label">Price by m3</label>
+              <label class="col-3 col-form-label">Price by m3 : </label>
               <div class="col-8">
                 <input class="volume form-control" type="number" placeholder="Volume in m3">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-3 col-form-label">Deductible option</label>
+              <label class="col-3 col-form-label" data-toggle="tooltip" title="In case of an accident/theft, convargo applies a 1000€ deductible. The shipper can reduce the deductible amount from 1000€ to 200€ with a deductible option for a few more euros per volume. The driver is charged an additional 1€/m3 when he chooses the deductible reduction option.">Deductible option : </label>
               <div class="col-1">
                 <input class="option" type="checkbox" placeholder="Deductible option">
               </div>
             </div>
           </div>
-            <a class="btn btn-light btn-xl js-scroll-trigger" id="compute" type="submit">Compute !</a>
+            <a class="btn btn-light btn-xl js-scroll-trigger" id="compute" type="submit" href="#actorssection">Compute !</a>
           </div>
         </div>
       </div>
-      &nbsp;&nbsp;
+    </section>
+
+    <section class="bg-primary" id="actorssection">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-center">
+          <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading">Actors</h2>
+            &nbsp;&nbsp;
+            <div></div>
             <hr class="my-4">
+            <div class="" id="actors"></div>
+          </div>
+          &nbsp;&nbsp;
+        </div>
+
+         <div class="row">
+            <p>
+              <ul>
+                <li>the shipper must pay the shipping price and the (optional) deductible reduction</li>
+                <li>the trucker receives the shipping price minus the commission</li>
+                <li>the insurance receives its part of the commission</li>
+                <li>the Treasury receives its part of the tax commission</li>
+                <li>convargo receives its part of the commission, plus the deductible reduction</li>
+              </ul>
+            </p>
+            <p>
+              <ul>
+                <li>The commission is 30% on the shipping price</li>
+                <li>The insurance takes half of commission</li>
+                <li>The Treasury takes 1€ by 500km range</li>
+                <li>Convargo takes the rest of commission</li>
+              </ul>
+            </p>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row">
-           <div class=" col-md-4 col-lg-6 text-center">
-              <div id="actors"></div>
-            </div> 
-        </div>
-      </div>
     </section>
 
     <!-- Bootstrap core JavaScript -->
@@ -139,6 +153,12 @@
     <script src="js/creative.js"></script>
     <script src="convargo.js"></script>
     <script src="index.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
 
   </body>
 

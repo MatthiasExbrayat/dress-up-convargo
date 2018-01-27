@@ -7,31 +7,14 @@
     const div = document.createElement('div');
     const template = actors.map(actor => {
       return `
-        <div class="actor">
-          <table class="table table-condensed">
-            <thead>
-              <tr>
-                <th>Actor</th>
-                <th>Type</th>
-                <th>Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>${actor.who}</td>
-                <td>${actor.type}</td>
-                <td>${actor.amount}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div id="actor"><p>${actor.who} -- ${actor.type} -- ${actor.amount}euros</p></div>
+        <hr class="my-4">
       `;
     }).join('');
 
     div.innerHTML = template;
     fragment.appendChild(div);
     document.querySelector('#actors').innerHTML = '';
-    document.querySelector('#actors').appendChild(table);
     document.querySelector('#actors').appendChild(fragment);
   };
 
